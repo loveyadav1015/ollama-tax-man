@@ -51,6 +51,14 @@ Synthetic placeholders live in `sample_data/` so you can try the pipeline withou
 python sample_data/generate.py
 ```
 
+
+
+
+<img width="705" height="541" alt="image" src="https://github.com/user-attachments/assets/a1e9f79a-f894-48ca-ad44-b1679f8ee9d8" />
+
+
+
+
 ## Known limitations
 
 - **Handwriting**, **faded thermal receipts**, and **creased photos** often come back low-confidence or `needs_review`.
