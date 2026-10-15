@@ -2,6 +2,7 @@
 
 Local-first tool that turns a folder of receipt or invoice **images and PDFs** into a CSV (`vendor`, `date`, `amount`, `currency`, `category`, `source_filename`) using a vision-language model that runs in **Ollama on your machine**. Documents are never sent to a cloud API.
 
+
 ## Prerequisites
 
 1. **Python 3.10+** with the project virtualenv (already created in `venv/` for this repo).
@@ -78,7 +79,7 @@ python sample_data/generate.py
 - Extra CSV columns (`page`, `confidence`, `status`, `date_normalized`, `date_ambiguous`, `notes`, `raw_response`) are kept so review is possible; the download still includes the requested fields.
 - Sample receipts are **synthetic PIL/PyMuPDF drawings**, not scans of real purchases.
 
-## Assumptions
+## Default
 
 - Ollama listens on `127.0.0.1:11434` (the default).
 - Folder scans are non-recursive unless you enable **Scan subfolders**.
