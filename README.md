@@ -71,7 +71,6 @@ python sample_data/generate.py
 
 ## Design decisions
 
-- **No `requirements.txt`**: the environment is pre-provisioned; versions are not pinned here.
 - **PyMuPDF (`fitz`)**, not pdf2image/poppler, rasterizes PDF pages at ~150 DPI.
 - **Ollama is called over `http://127.0.0.1:11434`** with `requests` (`/api/tags`, `/api/chat`). That is the same local API the `ollama` Python package wraps. Images are sent as base64 in the chat payload and never leave the host.
 - **JSON-only prompt** plus Ollama `format: json` and `temperature: 0`. One retry appends “return ONLY valid JSON, no markdown fences.” A second failure writes `status=needs_review` and stores `raw_response` instead of dropping the file.
